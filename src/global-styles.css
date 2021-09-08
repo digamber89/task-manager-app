@@ -1,0 +1,66 @@
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    display: block;
+    position: relative;
+    padding: 20px;
+    box-shadow: 0 0 1px 1px #ccc;
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+button {
+    background: black;
+    color: #fff;
+    padding: .5em;
+    border: none;
+    border-radius: 4px;
+}
+
+.task .task-header {
+    display: flex;
+    align-items: center;
+}
+
+.task .task-header h2 {
+    width: 70%;
+}
+
+form{
+    padding: 20px;
+    border: 1px solid;
+    margin-top: 10px;   
+}
+form input,select{
+    padding: .5em;
+}
+
+.form-control{
+    margin-bottom: 10px;
+}
+.form-control label{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.task-reminder{
+    margin-right: 20px;
+}
+
+ul.task-list{
+    list-style: none;
+}
