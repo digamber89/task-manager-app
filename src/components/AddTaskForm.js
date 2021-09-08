@@ -1,4 +1,5 @@
 import {useState} from "react";
+import {useTaskUpdate} from "../TaskProvider";
 
 const AddTaskForm = ({onAddTask}) => {
     const [formFields, setFormFields] = useState({
@@ -6,6 +7,8 @@ const AddTaskForm = ({onAddTask}) => {
         'description': '',
         'reminder': false
     });
+
+    const onAddTaskContext = useTaskUpdate();
 
     const onFormInputChange = (e) => {
         const target = e.target;
@@ -22,7 +25,9 @@ const AddTaskForm = ({onAddTask}) => {
 
     const onFormSubmit = (e) => {
         e.preventDefault();
-        onAddTask(formFields)
+        // onAddTask(formFields)
+        
+        onAddTaskContext({type: 'add', newTask: formFields});
         setFormFields({
             'title': '',
             'description': '',
