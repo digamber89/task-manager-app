@@ -17,7 +17,6 @@ const TaskProvider = ({children}) => {
             case "add":
                 let id = state.length + 1;
                 action.newTask.id = id;
-                console.log(action.newTask);
                 return [...state, action.newTask];
             case "remove":
                 return state.filter((task) => {

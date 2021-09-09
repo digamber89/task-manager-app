@@ -1,7 +1,7 @@
 import Task from "./Task";
 import {useTask} from "../../TaskProvider";
 
-const Tasks = ({onToggleReminder, onRemoveTask}) => {
+const Tasks = () => {
     const tasks = useTask();
     return (
         <ul className={"task-list"}>
